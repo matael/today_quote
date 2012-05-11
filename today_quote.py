@@ -16,6 +16,7 @@ from bottle import\
         redirect, \
         HTTPError, \
         template
+
 DBNAME="db.sqlite"
 
 
@@ -72,7 +73,6 @@ def upvote(id, do):
     c = db.cursor()
     c.execute(request_get, (str(id)))
     cur_votes = c.fetchone()
-    print(str(cur_votes)) # DEBUG
     if not cur_votes:
         db.close()
         raise HTTPError(404)
