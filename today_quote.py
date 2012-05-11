@@ -33,7 +33,7 @@ def home():
     """ Home page for a GET request """
     db = sqlite3.connect(DBNAME)
     c = db.cursor()
-    c.execute("SELECT * FROM quotes ORDER BY id DESC")
+    c.execute("SELECT * FROM quotes ORDER BY vote_up-vote_down DESC")
     result = c.fetchall()
     db.close()
     return template("templates/home.html", result=result)
