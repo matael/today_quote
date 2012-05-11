@@ -24,7 +24,7 @@ DBNAME="db.sqlite"
 
 @get('/static/<filename:path>')
 def send_static(filename):
-    return static_file(filename, root='/path/to/static/files')
+    return static_file(filename, root='/home/matael/today_quote/static')
 
 #### App Views ####
 
