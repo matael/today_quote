@@ -2,11 +2,14 @@
 	<table>
 		%for r in result:
 		<tr>
-			%for f in r:
-			<td>{{f}}</td>
-			%end
+            <td class="q_id">#{{r[0]}}</td>
+            <td class="q_votes">{{r[3]-r[4]}}</td>
+            <td class="q_author">{{r[1]}}</td>
+            <td class="q_quote">{{r[2]}}</td>
+            <td class="q_up"><a href="/{{r[0]}}/up">\o/</a></td>
+            <td class="q_down"><a href="/{{r[0]}}/down">/o\</a></td>
 		</tr>
 		%end
 	</table>
 </article>
-%rebase templates/base.html title="Home"
+%rebase templates/base.html title="Home @"
