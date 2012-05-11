@@ -1,0 +1,12 @@
+<article>
+	<table>
+		%for r in result:
+		<tr>
+			%for f in r:
+			<td>{{f}}</td>
+			%end
+		</tr>
+		%end
+	</table>
+</article>
+%rebase templates/base.html title="Home"
