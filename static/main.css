@@ -1,67 +1,82 @@
 body {
-    width: 800px;
-    margin: auto;
-    color: #1c1c1c;
+	width: 800px;
+	margin: auto;
+	color: #1c1c1c;
+	font-family: sans-serif;
 }
 
 body > header > h1 {
-    text-align: center;
-    border-bottom: 2px dotted #c1c1c1;
+	text-align: center;
+	border-bottom: 2px dotted #c1c1c1;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+	width: 100%;
+	border-collapse: collapse;
 }
 
 table td {
-    border-bottom: 1px dotted #c1c1c1;
-    border-top: 1px dotted #c1c1c1;
+	border-bottom: 1px dotted #c1c1c1;
+	border-top: 1px dotted #c1c1c1;
 }
 
 .q_id {
-    width: 5em;
-    text-align: center;
+	width: 5em;
+	text-align: center;
 }
 
 .q_votes {
-    width: 3em;
-    text-align: center;
+	width: 3em;
+	text-align: center;
 }
 
 .q_author {
-    width: 10em;
+	width: 10em;
 }
 
 .q_quote {
 }
 
 .q_up {
-    width: 4em;
-    text-align: center;
+	width: 4em;
+	text-align: center;
 }
 
 .q_down {
-    width: 4em;
-    text-align: center;
+	width: 4em;
+	text-align: center;
 }
 
 form {
-    width: 70%;
-    margin: auto;
-    text-align: center;
+	width: 70%;
+	margin: auto;
+	text-align: center;
 }
 
 form textarea {
-    width: 60%;
-    height: 50px;
-    display: block;
-    margin: auto;
+	width: 60%;
+	height: 80px;
+	display: block;
+	margin: auto;
 }
 
 
 
 footer {
-    text-align: center;
-    color: #c1c1c1;
+	text-align: center;
+	color: #c1c1c1;
+}
+
+footer a {
+	color: #c1c1c1;
+	text-decoration: none;
+}
+
+footer:hover a {
+	color: #c1c1c1;
+	text-decoration: underline;
+}
+
+footer a:hover {
+	color: #1c1c1c;
 }
