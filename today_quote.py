@@ -17,7 +17,7 @@ from bottle import\
         HTTPError, \
         template
 
-DBNAME="db.sqlite"
+DBNAME="/home/matael/today_quote/db.sqlite"
 
 
 #### Generic Views ####
@@ -85,4 +85,4 @@ def upvote(id, do):
 
 
 debug(True)
-run(reloader=True)
+#run(reloader=True)
