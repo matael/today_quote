@@ -71,7 +71,7 @@ def upvote(id, do):
     
     db = sqlite3.connect(DBNAME)
     c = db.cursor()
-    c.execute(request_get, (str(id)))
+    c.execute(request_get, [str(id)])
     cur_votes = c.fetchone()
     if not cur_votes:
         db.close()
