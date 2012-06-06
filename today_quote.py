@@ -60,7 +60,7 @@ def new_quote_form():
     """ display the form for adding quote """
     return template("templates/form.html")
 
-@get("/<id:int>/<do:re:(up)|(down)>")
+@get("/<id:re:\d+>/<do:re:(up)|(down)>")
 def upvote(id, do):
     if do=="up":
         request_get = "SELECT vote_up FROM quotes WHERE id LIKE ?"
