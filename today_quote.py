@@ -83,6 +83,20 @@ def upvote(id, do):
         db.close()
         redirect("/")
 
+@get("/api/<object>")
+def api(object):
+    db = sqlite3.connect(DBNAME)
+    c = db.cursor()
+    if object=="random":
+        c.execute("SELECT * FROM quotes ORDER BY RANDOM() LIMIT 1")
+    elif object=="top":
+        c.execute("SELECT * FROM quotes ORDER BY vote_up-vote_down DESC LIMIT 1")
+    result = c.fetchone()
+    db.close()
+    fields = ['id', 'author', 'quote', 'vote_up', 'vote_down']
+    return dict(zip(fields,result))
+
+
 
 debug(True)
 #run(reloader=True)
