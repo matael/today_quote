@@ -91,6 +91,8 @@ def api(object):
         c.execute("SELECT * FROM quotes ORDER BY RANDOM() LIMIT 1")
     elif object=="top":
         c.execute("SELECT * FROM quotes ORDER BY vote_up-vote_down DESC LIMIT 1")
+    if object=="last":
+        c.execute("SELECT * FROM quotes ORDER BY id DESC LIMIT 1")
     result = c.fetchone()
     db.close()
     fields = ['id', 'author', 'quote', 'vote_up', 'vote_down']
