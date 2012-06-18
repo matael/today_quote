@@ -93,6 +93,11 @@ def api(object):
         c.execute("SELECT * FROM quotes ORDER BY vote_up-vote_down DESC LIMIT 1")
     if object=="last":
         c.execute("SELECT * FROM quotes ORDER BY id DESC LIMIT 1")
+    if object=="all":
+        c.execute("SELECT * FROM quotes ORDER BY id")
+        result = c.fetchall()
+        db.close()
+        return {"results":result}
     result = c.fetchone()
     db.close()
     fields = ['id', 'author', 'quote', 'vote_up', 'vote_down']
